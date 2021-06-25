@@ -115,3 +115,88 @@ Tampilan page artikel
 ampilan page contact
 
 ![19](https://user-images.githubusercontent.com/56387936/122597970-5b474000-d096-11eb-8033-e219bfc7583f.JPG)
+
+# Praktikum 12: Framework Lanjutan (CRUD)
+# Langkah-langkah Praktikum
+
+Untuk memulai membuat aplikasi CRUD sederhana, yang perlu disiapkan adalah database server menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan melalui XAMPP.
+
+# Membuat Database dan Membuat Tabel
+
+![1](https://user-images.githubusercontent.com/56387936/123455483-f64a9780-d60b-11eb-8e8a-feec845eca78.JPG)
+
+# Konfigurasi koneksi database
+
+Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan du acara, yaitu pada file app/config/database.php atau menggunakan file .env. Pada praktikum ini kita gunakan konfigurasi pada file .env.
+
+![2](https://user-images.githubusercontent.com/56387936/123455630-2134eb80-d60c-11eb-8efd-e3794f249d70.JPG)
+
+# Membuat Model
+
+Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori app/Models dengan nama ArtikelModel.php
+
+![3](https://user-images.githubusercontent.com/56387936/123455722-3dd12380-d60c-11eb-9c59-8de730542dbc.JPG)
+
+# Membuat Controller
+
+Buat Controller baru dengan nama Artikel.php pada direktori app/Controllers.
+
+![4](https://user-images.githubusercontent.com/56387936/123455789-54777a80-d60c-11eb-9f0e-a43e9e645584.JPG)
+
+# Membuat View
+
+Buat direktori baru dengan nama artikel pada direktori app/views, kemudian buat file baru dengan nama index.php
+
+![5](https://user-images.githubusercontent.com/56387936/123455904-7113b280-d60c-11eb-95a2-dab8abc09d26.JPG)
+
+Selanjutnya buka browser kembali, dengan mengakses url http://localhost:8080/artikel 
+
+![6](https://user-images.githubusercontent.com/56387936/123455988-87217300-d60c-11eb-979b-252e6ee0667a.JPG)
+
+# Belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada database agar dapat ditampilkan datanya.
+
+![7](https://user-images.githubusercontent.com/56387936/123456168-bdf78900-d60c-11eb-80f3-cd48d31f3b6c.JPG)
+
+# Refresh kembali browser, sehingga akan ditampilkan hasilnya.
+
+![8](https://user-images.githubusercontent.com/56387936/123456265-d9629400-d60c-11eb-8483-b131b9916291.JPG)
+
+# Membuat Tampilan Detail Artikel
+
+Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada Controller Artikel dengan nama view().
+
+![aa](https://user-images.githubusercontent.com/56387936/123457123-cd2b0680-d60d-11eb-9bbe-8fb1b58d123b.JPG)
+
+# Membuat View Detail
+
+Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php.
+
+![ab](https://user-images.githubusercontent.com/56387936/123457435-1c713700-d60e-11eb-8e19-71c7afa0f712.JPG)
+
+# Membuat Routing untuk artikel detail
+
+Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artikel detail.
+
+![ac](https://user-images.githubusercontent.com/56387936/123457573-4165aa00-d60e-11eb-954e-e2010f6ac82e.JPG)
+
+# Kemudian Refresh kembali
+
+![12](https://user-images.githubusercontent.com/56387936/123457807-8093fb00-d60e-11eb-835c-8057fadf260e.JPG)
+
+# Membuat Menu Admin
+
+Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada Controller Artikel dengan nama admin_index().
+
+![13](https://user-images.githubusercontent.com/56387936/123458146-e8e2dc80-d60e-11eb-870b-a5820d03e105.JPG)
+
+Selanjutnya buat view untuk tampilan admin dengan nama admin_index.php
+
+![14](https://user-images.githubusercontent.com/56387936/123458306-1a5ba800-d60f-11eb-9183-a9a04939dde8.JPG)
+
+![15](https://user-images.githubusercontent.com/56387936/123458369-2c3d4b00-d60f-11eb-95d6-4e237d86ef18.JPG)
+
+Tambahkan routing untuk menu admin seperti berikut:
+
+![16](https://user-images.githubusercontent.com/56387936/123458850-b5ed1880-d60f-11eb-9e17-74e4fd15c5ec.JPG)
+
+
